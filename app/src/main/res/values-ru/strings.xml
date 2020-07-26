@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">WeatherGeek</string>
+    <string name="cityName_text">cityName</string>
+    <string name="cityName_moscow">Москва</string>
+    <string name="cityName_newYork">Нью-Йорк</string>
+    <string name="cityName_london">Лондон</string>
+    <string name="currentDay">Current</string>
+    <string name="futureDay">Future</string>
+    <string name="doubleFutureDay">DFuture</string>
+    <string name="dayMon">Пнд</string>
+    <string name="dayTue">Втр</string>
+    <string name="dayWed">Срд</string>
+    <string name="dayThu">Чтв</string>
+    <string name="dayFri">Птн</string>
+    <string name="daySat">Сбт</string>
+    <string name="daySun">Вск</string>
+    <string name="currentTemp">CurTemp</string>
+    <string name="futureTemp">FutTemp</string>
+    <string name="doubleFutureTemp">DFutTemp</string>
+    <string name="doubleNextDate">DNextDate</string>
+    <string name="currentDate">CurDate</string>
+    <string name="nextDate">NextDate</string>
+</resources>

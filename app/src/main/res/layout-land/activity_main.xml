@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageViewCurrentDay"
+        android:layout_width="82dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewCurrentDay"
+        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintStart_toStartOf="@+id/textViewCurrentDay"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCurrentDate"
+        app:srcCompat="@drawable/sun" />
+
+    <ImageView
+        android:id="@+id/imageViewFutureDay"
+        android:layout_width="82dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewFutureDay"
+        app:layout_constraintStart_toStartOf="@+id/textViewFutureDay"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNextDate"
+        app:srcCompat="@drawable/cloudysun" />
+
+    <ImageView
+        android:id="@+id/imageViewDoubleFutureDay"
+        android:layout_width="82dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewDoubleFutureDay"
+        app:layout_constraintStart_toStartOf="@+id/textViewDoubleFutureDay"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDoubleNextDate"
+        app:srcCompat="@drawable/rainy" />
+
+    <TextView
+        android:id="@+id/cityName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/cityName_text"
+        android:textSize="42sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.045" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="?android:attr/panelBackground"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/burger" />
+
+    <ImageButton
+        android:id="@+id/imageButton_Moscow"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="?android:attr/panelBackground"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton_NewYork"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewCurrentDay"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageViewCurrentDay"
+        app:layout_constraintTop_toTopOf="@+id/imageButton_NewYork"
+        app:srcCompat="@drawable/moscow" />
+
+    <ImageButton
+        android:id="@+id/imageButton_NewYork"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="?android:attr/panelBackground"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewFutureDay"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageViewFutureDay"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.951"
+        app:srcCompat="@drawable/newyork" />
+
+    <ImageButton
+        android:id="@+id/imageButton_London"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="?android:attr/panelBackground"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton_NewYork"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewDoubleFutureDay"
+        app:layout_constraintStart_toStartOf="@+id/imageViewDoubleFutureDay"
+        app:layout_constraintTop_toTopOf="@+id/imageButton_NewYork"
+        app:srcCompat="@drawable/london" />
+
+    <TextView
+        android:id="@+id/textViewCurrentTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="@string/currentTemp"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewCurrentDay"
+        app:layout_constraintStart_toStartOf="@+id/imageViewCurrentDay"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewCurrentDay" />
+
+    <TextView
+        android:id="@+id/textViewCurrentDay"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="100dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/currentDay"
+        app:layout_constraintEnd_toStartOf="@+id/textViewFutureDay"
+        app:layout_constraintTop_toTopOf="@+id/textViewFutureDay" />
+
+    <TextView
+        android:id="@+id/textViewFutureDay"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/futureDay"
+        app:layout_constraintEnd_toEndOf="@+id/cityName"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="@+id/cityName"
+        app:layout_constraintTop_toBottomOf="@+id/cityName" />
+
+    <TextView
+        android:id="@+id/textViewDoubleFutureDay"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/doubleFutureDay"
+        app:layout_constraintStart_toEndOf="@+id/textViewFutureDay"
+        app:layout_constraintTop_toTopOf="@+id/textViewFutureDay" />
+
+    <TextView
+        android:id="@+id/textViewFutureTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="@string/futureTemp"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewFutureDay"
+        app:layout_constraintStart_toStartOf="@+id/imageViewFutureDay"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewFutureDay" />
+
+    <TextView
+        android:id="@+id/textViewDoubleFutureTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="@string/doubleFutureTemp"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewDoubleFutureDay"
+        app:layout_constraintStart_toStartOf="@+id/imageViewDoubleFutureDay"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewDoubleFutureDay" />
+
+    <TextView
+        android:id="@+id/textViewCurrentDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/currentDate"
+        app:layout_constraintEnd_toEndOf="@+id/textViewCurrentDay"
+        app:layout_constraintStart_toStartOf="@+id/textViewCurrentDay"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCurrentDay" />
+
+    <TextView
+        android:id="@+id/textViewNextDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/nextDate"
+        app:layout_constraintEnd_toEndOf="@+id/textViewFutureDay"
+        app:layout_constraintStart_toStartOf="@+id/textViewFutureDay"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFutureDay" />
+
+    <TextView
+        android:id="@+id/textViewDoubleNextDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/doubleNextDate"
+        app:layout_constraintEnd_toEndOf="@+id/textViewDoubleFutureDay"
+        app:layout_constraintStart_toStartOf="@+id/textViewDoubleFutureDay"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDoubleFutureDay" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
